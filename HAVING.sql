@@ -28,3 +28,8 @@ WHERE staff_id = 2
 GROUP BY customer_id
 HAVING SUM(amount) >= 110
 ;
+
+SELECT COUNT(title)
+FROM film
+WHERE title LIKE'J%'
+;
