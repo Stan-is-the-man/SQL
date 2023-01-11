@@ -3,9 +3,14 @@ FROM payment
 GROUP BY customer_id
 HAVING SUM(amount) > 150
 
-
 SELECT store_id, COUNT(customer_id)
 FROM customer
 GROUP BY store_id
 HAVING COUNT(customer_id) > 274
+;
+
+SELECT customer_id, COUNT(amount)
+FROM payment
+GROUP BY customer_id
+HAVING COUNT(amount) > 39
 ;
