@@ -15,7 +15,7 @@ WHERE inventory.film_id IS null
 Challenge answers:
 SELECT district, email
 FROM address
-LEFT JOIN customer
+INNER JOIN customer
 ON address.address_id = customer.address_id
-WHERE district LIKE 'California'
+WHERE district ='California'
 ;
