@@ -9,7 +9,7 @@ In this course you will learn everything you need to become a SQL Pro! Including
 
 Get started with PostgreSQL and PgAdmin , two of the world's most popular SQL tools
 
-Learn he basics of SQL syntax
+Learn the basics of SQL syntax
 
 Analyzing data using aggregate functions with GROUP BY commands
 
