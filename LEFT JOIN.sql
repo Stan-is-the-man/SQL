@@ -27,3 +27,15 @@ INNER JOIN actor ON actor.actor_id = film_actor.actor_id
 WHERE first_name = 'Nick' 
 AND last_name = 'Wahlberg'
 ;
+
+or
+
+SELECT title, first_name, last_name
+FROM actor
+JOIN film_actor
+ON actor.actor_id = film_actor.actor_id
+JOIN film
+ON film.film_id = film_actor.film_id
+WHERE first_name = 'Nick'
+AND last_name = 'Wahlberg'
+;
