@@ -11,13 +11,11 @@ FROM payment
 Assessments:
 SELECT TO_CHAR(payment_date,'MONTH')
 FROM payment
-GROUP BY TO_CHAR
-;
+GROUP BY TO_CHAR;
 
 or 
 SELECT DISTINCT(TO_CHAR(payment_date,'MONTH'))
-FROM payment
-;
+FROM payment;
 
 SELECT COUNT(EXTRACT(DOW FROM payment_date))
 FROM payment
