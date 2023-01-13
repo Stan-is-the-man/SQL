@@ -23,3 +23,8 @@ SELECT COUNT(EXTRACT(DOW FROM payment_date))
 FROM payment
 WHERE EXTRACT(DOW FROM payment_date) = 1;
 
+or
+SELECT COUNT(*)
+FROM payment
+WHERE EXTRACT(DOW FROM payment_date) = 1;
+
