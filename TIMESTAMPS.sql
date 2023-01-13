@@ -4,5 +4,7 @@ FROM payment;
 SELECT AGE(payment_date)
 FROM payment;
 
-
+SELECT TO_CHAR(payment_date, 'dd.mm.yyyy')
+FROM payment
+;
 
