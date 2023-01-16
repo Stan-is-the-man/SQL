@@ -64,6 +64,13 @@ WHERE name ILIKE '%tennis court%'
 AND starttime BETWEEN  '2012-09-21' and  '2012-09-22'
 ORDER BY starttime
 
+14:
+SELECT starttime, firstname, surname
+FROM cd.bookings
+JOIN cd.members
+ON cd.bookings.memid = cd.members.memid
+WHERE firstname = 'David'
+AND surname = 'Farrell';
 
 
 
