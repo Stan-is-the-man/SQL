@@ -36,6 +36,8 @@ FROM cd.members
 ORDER BY joindate DESC
 LIMIT 1
 
+ or SELECT MAX(joindate) AS latest_signup FROM cd.members;
+
 10:
 SELECT COUNT(*)
 FROM cd.facilities
