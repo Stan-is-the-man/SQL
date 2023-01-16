@@ -42,11 +42,29 @@ FROM cd.facilities
 WHERE guestcost >= 10
 
 11:
-SELECT facid, SUM(slots)
+SELECT facid, SUM(slots) as total_number_of_slots
 FROM cd.bookings
 WHERE starttime BETWEEN '2012-09-01' AND '2012-10-01'
 GROUP BY facid
-ORDER BY sum
+ORDER BY total_number_of_slots
+
+12:
+SELECT facid, SUM(slots)
+FROM cd.bookings
+GROUP BY facid
+HAVING SUM(slots) > 1000
+ORDER BY facid
+
+13:
+SELECT starttime, name AS facilitie_name
+FROM cd.bookings
+JOIN cd.facilities
+ON cd.bookings.facid = cd.facilities.facid
+WHERE name ILIKE '%tennis court%'
+AND starttime BETWEEN  '2012-09-21' and  '2012-09-22'
+ORDER BY starttime
+
+
 
 
 
