@@ -4,5 +4,9 @@ FROM cd.facilities
 WHERE membercost != 0
 
 4:
+SELECT *
+FROM cd.facilities
+WHERE membercost != 0
+AND membercost < (monthlymaintenance * 0.02)
 
 
