@@ -4,9 +4,12 @@ FROM cd.facilities
 WHERE membercost != 0
 
 4:
-SELECT *
+SELECT facid, name, membercost, monthlymaintenance
 FROM cd.facilities
 WHERE membercost != 0
 AND membercost < (monthlymaintenance * 0.02)
+
+5:
+
 
 
