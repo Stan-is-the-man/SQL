@@ -1,0 +1,2 @@
+INSERT INTO account(username, password, email, created_on)
+VALUES ('Yoan', 'pass1', 'yoshi@mail.com', CURRENT_TIMESTAMP);
