@@ -1,2 +1,6 @@
 INSERT INTO account(username, password, email, created_on)
 VALUES ('Yoan', 'pass1', 'yoshi@mail.com', CURRENT_TIMESTAMP);
+
+Insert into table with FKs:
+INSERT INTO account_job(user_id, job_id, hire_date)
+VALUES(1,2,CURRENT_TIMESTAMP)
