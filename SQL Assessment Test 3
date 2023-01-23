@@ -17,3 +17,9 @@ CREATE TABLE teachers(
 	email VARCHAR(50) UNIQUE,
 	departement VARCHAR(50)
 )
+
+ADD extra contrsiant for the graduation year to be > 2022:
+
+ALTER TABLE students
+ADD CONSTRAINT check_year
+CHECK (graduation_year > 2022);
