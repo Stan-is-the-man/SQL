@@ -8,3 +8,12 @@ CREATE TABLE students(
 	graduation_year INTEGER
 )
 
+CREATE TABLE teachers(
+	teacher_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	homeroom_number INTEGER,
+	phone VARCHAR(20) UNIQUE,
+	email VARCHAR(50) UNIQUE,
+	departement VARCHAR(50)
+)
