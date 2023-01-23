@@ -1,1 +1,9 @@
 
+CREATE TABLE students(
+	student_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	nickname VARCHAR(30) UNIQUE,
+	birthdate DATE CHECK(birthdate > '2014-01-01'),
+	signed_at_school DATE CHECK(signed_at_school > '2014-06-31')
+)
