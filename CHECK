@@ -7,3 +7,21 @@ CREATE TABLE students(
 	birthdate DATE CHECK(birthdate > '2014-01-01'),
 	signed_at_school DATE CHECK(signed_at_school > '2014-06-31')
 )
+
+If the inserted valuse are not according to the constraints(CHECK), return ERROr:
+
+INSERT INTO students(
+	first_name,
+	last_name,
+	nickname,
+	birthdate,
+	signed_at_school
+)
+VALUES(
+	'Stan',
+	'Yanakiev',
+	'stan',
+	'2015-01-01',
+	'2016-01-01'
+)
+
