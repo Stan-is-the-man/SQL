@@ -23,3 +23,22 @@ ADD extra contrsiant for the graduation year to be > 2022:
 ALTER TABLE students
 ADD CONSTRAINT check_year
 CHECK (graduation_year > 2022);
+
+
+INSERT INTO teachers(
+	first_name,
+	last_name,
+	homeroom_number,
+	departement,
+	email,
+	phone
+)
+
+VALUES(
+	'Jonas',
+	'Salk',
+	5,
+	'Biology Department',
+	'jsalk@school.org',
+	' 777-555-4321'
+)
