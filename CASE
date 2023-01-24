@@ -18,3 +18,16 @@ CASE customer_id
 	ELSE 'Loser'
 END AS reuslts
 FROM customer;
+
+
+SELECT
+SUM(CASE rental_rate
+	WHEN 0.99 THEN 1
+	ELSE 0
+END) AS bargain,
+
+SUM(CASE rental_rate
+	WHEN 4.99 THEN 1
+	ELSE 0
+END) AS not_a_bargain
+FROM film
