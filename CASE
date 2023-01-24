@@ -1,1 +1,10 @@
+General CASE statement:
 
+SELECT customer_id,
+CASE
+	WHEN (customer_id <= 100) THEN 'Gold memeber'
+	WHEN (customer_id BETWEEN 100 AND 150) THEN 'Silver member'
+	WHEN (customer_id >= 150) THEN 'Bronze member'
+	ELSE 'Regular member'
+END AS type_of_membership
+FROM customer;
