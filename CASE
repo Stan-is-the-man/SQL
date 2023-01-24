@@ -8,3 +8,13 @@ CASE
 	ELSE 'Regular member'
 END AS type_of_membership
 FROM customer;
+
+CASE expression:
+
+SELECT customer_id,
+CASE customer_id
+	WHEN 1 THEN 'Winner'
+	WHEN 2 THEN 'Almost there'
+	ELSE 'Loser'
+END AS reuslts
+FROM customer;
