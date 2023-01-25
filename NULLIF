@@ -1,1 +1,10 @@
-
+SELECT
+SUM(
+	CASE dep
+		WHEN 'A' THEN 1
+		ELSE 0
+	END
+)
+/
+NULLIF(SUM(	CASE dep WHEN 'B' THEN 1 ELSE 0	END),0) AS ratio
+FROM departments
