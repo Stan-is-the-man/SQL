@@ -45,3 +45,7 @@ FROM payment
 WHERE customer_id BETWEEN 100 and 105
 GROUP BY customer_id
 HAVING MAX(amount) BETWEEN 7.99 and 8.99;
+
+SELECT COUNT(payment_date)
+FROM payment
+WHERE DATE(payment_date) = '2007-02-15'
