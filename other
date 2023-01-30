@@ -23,3 +23,13 @@ FROM orders
 GROUP BY customer_id, ord_date
 HAVING MAX(purch_amt) IN (2000, 3000, 5760,6000)
 ORDER BY MAX(purch_amt) DESC
+
+SELECT customer_id, MAX(amount)
+FROM payment
+WHERE customer_id BETWEEN 100 and 105
+GROUP BY customer_id  - the same as:
+
+SELECT customer_id, MAX(amount)
+FROM payment
+GROUP BY customer_id
+HAVING customer_id BETWEEN 100 and 105
