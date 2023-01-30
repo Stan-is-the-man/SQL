@@ -15,3 +15,5 @@ FROM film
 GROUP BY rating
 ORDER BY AVG(replacement_cost);
 
+SELECT COUNT(DISTINCT(customer_id))
+FROM payment
