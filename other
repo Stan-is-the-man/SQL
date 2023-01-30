@@ -17,3 +17,9 @@ ORDER BY AVG(replacement_cost);
 
 SELECT COUNT(DISTINCT(customer_id))
 FROM payment
+
+SELECT customer_id, ord_date, MAX(purch_amt)
+FROM orders
+GROUP BY customer_id, ord_date
+HAVING MAX(purch_amt) IN (2000, 3000, 5760,6000)
+ORDER BY MAX(purch_amt) DESC
