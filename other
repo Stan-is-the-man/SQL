@@ -63,3 +63,10 @@ LEFT JOIN  inventory
 ON film.film_id = inventory.film_id
 WHERE inventory_id IS null;
 
+or  
+
+SELECT *
+FROM inventory
+LEFT JOIN  film
+ON film.film_id = inventory.film_id
+
