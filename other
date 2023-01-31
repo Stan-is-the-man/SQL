@@ -56,3 +56,10 @@ FROM address
 GROUP BY district
 HAVING COUNT(address) > 7
 ORDER BY COUNT(address) DESC;
+
+SELECT *
+FROM film
+LEFT JOIN  inventory
+ON film.film_id = inventory.film_id
+WHERE inventory_id IS null;
+
