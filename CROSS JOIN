@@ -1,1 +1,6 @@
+AKA Cratesian product(each with each)
 
+SELECT *
+FROM salesman
+CROSS JOIN customer
+WHERE grade IS NOT NULL
