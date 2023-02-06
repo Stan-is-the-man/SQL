@@ -112,7 +112,7 @@ SELECT cust_name, name as salesman_name
 FROM customer	
 LEFT JOIN salesman
 ON customer.salesman_id = salesman.salesman_id
-ORDER BY name
+ORDER BY name;
 
 SELECT salesman.name as salesman_name, cust_name as customer_name, customer.city as customer_city, purch_amount
 FROM salesman	
