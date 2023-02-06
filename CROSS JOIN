@@ -1,4 +1,4 @@
-AKA Cratesian product(each with each)
+AKA Cartesian product(each with each)
 
 SELECT *
 FROM salesman
