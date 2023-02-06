@@ -122,3 +122,11 @@ LEFT JOIN orders
 ON customer.customer_id = orders.customer_id
 WHERE purch_amount > 2000
 AND grade IS NOT NULL;
+
+
+JOIN + GROUP:
+SELECT salesman.city, AVG(grade)
+FROM salesman
+JOIN customer
+ON salesman.salesman_id = customer.salesman_id
+GROUP BY salesman.city
