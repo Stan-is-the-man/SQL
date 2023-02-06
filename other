@@ -88,3 +88,8 @@ INNER JOIN customer
 ON salesman.city = customer.city
 WHERE salesman.city = customer.city;
 
+SELECT cust_name, customer.city as Customer_City, grade, name as Salwesman_Name, salesman.city as Salesman_City
+FROM customer
+LEFT JOIN salesman
+ON customer.salesman_id = salesman.salesman_id
+ORDER BY customer_id;
