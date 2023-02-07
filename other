@@ -130,3 +130,7 @@ FROM salesman
 JOIN customer
 ON salesman.salesman_id = customer.salesman_id
 GROUP BY salesman.city
+
+SELECT ROUND(AVG(price),2) FROM car
+JOIN models
+ON car.car_id = models.car_id
