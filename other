@@ -133,4 +133,13 @@ GROUP BY salesman.city
 
 SELECT ROUND(AVG(price),2) FROM car
 JOIN models
-ON car.car_id = models.car_id
+ON car.car_id = models.car_id;
+
+INSERT INTO models(
+	to_car,
+	model,
+)
+VALUES(
+	1,
+	'Pilot'
+)
