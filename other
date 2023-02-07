@@ -147,3 +147,6 @@ VALUES(
 
 SELECT DISTINCT(EXTRACT(MONTH FROM payment_date))
 FROM payment
+
+SELECT DISTINCT(TO_CHAR(payment_date,'MONTH'))
+FROM payment
