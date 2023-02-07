@@ -143,3 +143,7 @@ VALUES(
 	1,
 	'Pilot'
 )
+
+
+SELECT DISTINCT(EXTRACT(MONTH FROM payment_date))
+FROM payment
