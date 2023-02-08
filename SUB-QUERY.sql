@@ -19,3 +19,10 @@ WHERE amount >
 (SELECT AVG(amount)
 FROM payment)
 
+SELECT title, rental_rate
+FROM film
+WHERE rental_rate >
+(SELECT AVG(rental_rate)
+FROM film)
+
+
