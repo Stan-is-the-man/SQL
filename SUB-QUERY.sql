@@ -36,4 +36,11 @@ WHERE rental_rate >
 (SELECT AVG(rental_rate)
 FROM film);
 
+SELECT first_name, last_name
+FROM employees
+WHERE salary >
+(SELECT salary
+FROM employee
+WHERE employee_id = 163)
+
 
