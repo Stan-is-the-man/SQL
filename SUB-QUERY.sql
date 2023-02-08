@@ -13,4 +13,9 @@ FROM rental
 JOIN inventory ON inventory.inventory_id = rental.inventory_id
 WHERE return_date BETWEEN '2005-05-28' AND '2005-05-29')
 
+SELECT amount
+FROM payment
+WHERE amount >
+(SELECT AVG(amount)
+FROM payment)
 
