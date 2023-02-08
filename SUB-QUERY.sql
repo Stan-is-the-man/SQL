@@ -56,10 +56,15 @@ BETWEEN (SELECT MIN(rental_rate)
  		FROM film)
  AND 2.99
  
- SELECT *
+https://www.w3resource.com/sql-exercises/sql-subqueries-exercises.php - ex.11
+GETTING RESULT WITHOUT JOINING TABLES, JUST USE THE DATA FROM BOTH ONES !!!!!!!!!!!!
+ 
+SELECT *
 FROM employees
 WHERE department_id NOT IN
 (SELECT department_id
 FROM departments
 WHERE manager_id
 BETWEEN 100 AND 200)
+
+
