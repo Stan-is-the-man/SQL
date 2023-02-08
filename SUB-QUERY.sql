@@ -55,3 +55,11 @@ WHERE rental_rate
 BETWEEN (SELECT MIN(rental_rate)
  		FROM film)
  AND 2.99
+ 
+ SELECT *
+FROM employees
+WHERE department_id NOT IN
+(SELECT department_id
+FROM departments
+WHERE manager_id
+BETWEEN 100 AND 200)
