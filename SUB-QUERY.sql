@@ -49,4 +49,9 @@ WHERE amount =
 (SELECT MIN(amount)
 FROM payment);
 
-
+SELECT title
+FROM film
+WHERE rental_rate 
+BETWEEN (SELECT MIN(rental_rate)
+ 		FROM film)
+ AND 2.99
