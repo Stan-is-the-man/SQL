@@ -57,7 +57,7 @@ BETWEEN (SELECT MIN(rental_rate)
  AND 2.99
  
 https://www.w3resource.com/sql-exercises/sql-subqueries-exercises.php - ex.11
-GETTING RESULT WITHOUT JOINING TABLES, JUST USE THE DATA FROM BOTH ONES !!!!!!!!!!!!
+GETTING RESULT WITHOUT JOINING TABLES, JUST USE THE DATA FROM BOTH ONES(needed resulted columns JUST from employee) !!!!!!!!!!!!
  
 SELECT *
 FROM employees
