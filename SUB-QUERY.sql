@@ -47,4 +47,6 @@ SELECT payment_id, amount
 FROM payment
 WHERE amount = 
 (SELECT MIN(amount)
-FROM payment)
+FROM payment);
+
+
