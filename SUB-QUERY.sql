@@ -43,4 +43,8 @@ WHERE salary >
 FROM employee
 WHERE employee_id = 163)
 
-
+SELECT payment_id, amount
+FROM payment
+WHERE amount = 
+(SELECT MIN(amount)
+FROM payment)
