@@ -67,4 +67,14 @@ FROM departments
 WHERE manager_id
 BETWEEN 100 AND 200)
 
+MANY NESTED conditions - select all payments that are equal to the second highest payment:
+SELECT *
+FROM payment
+WHERE amount = 
+(SELECT MAX(amount)
+FROM payment
+WHERE amount <
+(SELECT MAX(amount)
+FROM payment))
+
 
