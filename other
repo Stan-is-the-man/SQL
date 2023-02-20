@@ -160,3 +160,9 @@ long:
 SELECT COUNT(EXTRACT(DOW FROM payment_date))
 FROM payment
 WHERE EXTRACT(DOW FROM payment_date) = 1
+
+SELECT email, district
+FROM customer
+INNER JOIN address
+ON customer.address_id = address.address_id
+WHERE district = 'California'
