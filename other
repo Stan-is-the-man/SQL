@@ -146,33 +146,34 @@ VALUES(
 
 
 SELECT DISTINCT(EXTRACT(MONTH FROM payment_date))
-FROM payment
+FROM payment;
 
 SELECT DISTINCT(TO_CHAR(payment_date,'MONTH'))
-FROM payment
+FROM payment;
 
 short:
 SELECT COUNT(*)
 FROM payment
-WHERE EXTRACT(DOW FROM payment_date) = 1
+WHERE EXTRACT(DOW FROM payment_date) = 1;
 
 long:
 SELECT COUNT(EXTRACT(DOW FROM payment_date))
 FROM payment
-WHERE EXTRACT(DOW FROM payment_date) = 1
+WHERE EXTRACT(DOW FROM payment_date) = 1;
 
 SELECT email, district
 FROM customer
 INNER JOIN address
 ON customer.address_id = address.address_id
-WHERE district = 'California'
+WHERE district = 'California';
+
 
 SELECT SUM(title)
 FROM film
-WHERE title LIKE "J%"
+WHERE title LIKE "J%";
 
 SELECT rating, ROUND(AVG(replacement_cost),2)
 FROM film
-GROUP BY rating 
+GROUP BY rating;
 
 
