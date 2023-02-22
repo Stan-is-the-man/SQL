@@ -176,4 +176,10 @@ SELECT rating, ROUND(AVG(replacement_cost),2)
 FROM film
 GROUP BY rating;
 
+SELECT customer_id, SUM(amount) AS total
+FROM payment
+GROUP BY customer_id
+ORDER BY total DESC
+LIMIT 5;  
+
 
