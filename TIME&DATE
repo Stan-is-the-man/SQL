@@ -1,2 +1,7 @@
 SELECT DISTINCT(TO_CHAR(payment_date, 'MONTH'))
 FROM payment
+
+
+SELECT COUNT(EXTRACT(DOW FROM payment_date))
+FROM payment
+WHERE EXTRACT(DOW FROM payment_date) = 1
