@@ -1,3 +1,8 @@
 SELECT rental_rate + replacelent_cost
 FROM film
 WHERE film_id = 133
+
+SELECT ROUND(rental_rate / replacement_cost,3)
+FROM film
+
+
