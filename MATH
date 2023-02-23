@@ -1,0 +1,3 @@
+SELECT rental_rate + replacelent_cost
+FROM film
+WHERE film_id = 133
