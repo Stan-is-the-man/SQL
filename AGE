@@ -1,6 +1,6 @@
 SELECT AGE(payment_date),
 CASE
-	WHEN (EXTRACT(YEAR FROM AGE(payment_date)) < 16) THEN 'OK'
-	ELSE 'Younger'
-END AS bababa
-FROM payment
+	WHEN (EXTRACT(YEAR FROM AGE(payment_date)) < 16) THEN 'Young'
+	ELSE 'Old'
+END AS status
+FROM payment;
