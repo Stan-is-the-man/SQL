@@ -77,4 +77,12 @@ WHERE amount <
 (SELECT MAX(amount)
 FROM payment))
 
+SELECT *
+FROM orders
+WHERE salesman_id = 
+(SELECT salesman_id
+FROM salesman
+WHERE city = 'London'
+)
+
 
