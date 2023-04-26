@@ -183,3 +183,11 @@ ORDER BY total DESC
 LIMIT 5;  
 
 
+SELECT customer_id, first_name, last_name,
+CASE 
+	when (customer_id <=50) then 'gold'
+	when (customer_id between 50 and 100) then 'silver'
+	else 'bronze'
+	end as status
+FROM customer
+order by status DESC
